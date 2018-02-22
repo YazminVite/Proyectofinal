@@ -1,0 +1,34 @@
+$def with(clientes, message)
+<h3>
+    <a href="/clientes">clientes</a>
+</h3>
+$if message != None:
+    <div class="alert alert-warning">
+        <strong>Advertencia </strong> $message
+    </div>
+    <br>
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id_cliente" id="id_cliente" value="$clientes.id_cliente" />
+
+    <div class="form-group">
+    <label for="nombre">nombre</label>
+    <input required id="nombre" type="text" class="form-control" name="nombre" size="30" value="$clientes.nombre"/>
+</div><div class="form-group">
+    <label for="apellidos">apellidos</label>
+    <input required id="apellidos" type="text" class="form-control" name="apellidos" size="30" value="$clientes.apellidos"/>
+</div><div class="form-group">
+    <label for="telefono">telefono</label>
+    <input required id="telefono" type="text" class="form-control" name="telefono" size="30" value="$clientes.telefono"/>
+</div><div class="form-group">
+    <label for="proyecto">proyecto</label>
+    <input required id="proyecto" type="text" class="form-control" name="proyecto" size="30" value="$clientes.proyecto"/>
+</div>
+
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-pencil"></span> Edit</button>
+    </div>
+</form>
+<br>
+<br>
+<br>

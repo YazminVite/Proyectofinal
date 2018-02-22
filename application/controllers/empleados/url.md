@@ -1,0 +1,5 @@
+'/empleados', 'application.controllers.empleados.index.Index',
+'/empleados/view/(.+)', 'application.controllers.empleados.view.View',
+'/empleados/edit/(.+)', 'application.controllers.empleados.edit.Edit',
+'/empleados/delete/(.+)', 'application.controllers.empleados.delete.Delete',
+'/empleados/insert', 'application.controllers.empleados.insert.Insert',

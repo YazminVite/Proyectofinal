@@ -1,0 +1,35 @@
+$def with(proyectos, message)
+<h3>
+    <a href="/proyectos">proyectos</a>
+</h3>
+$if message != None:
+    <div class="alert alert-warning">
+        <strong>Advertencia </strong> $message
+    </div>
+<br>
+
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id_proyecto" id="id_proyecto" value="$proyectos.id_proyecto" />
+
+    <div class="form-group">
+    <label for="proyecto">proyecto</label>
+    <input readonly id="proyecto" type="text" class="form-control" name="proyecto" size="30" value="$proyectos.proyecto"/>
+</div><div class="form-group">
+    <label for="estatus">estatus</label>
+    <input readonly id="estatus" type="text" class="form-control" name="estatus" size="30" value="$proyectos.estatus"/>
+</div><div class="form-group">
+    <label for="empleado_elabora">empleado_elabora</label>
+    <input readonly id="empleado_elabora" type="text" class="form-control" name="empleado_elabora" size="30" value="$proyectos.empleado_elabora"/>
+</div><div class="form-group">
+    <label for="titular">titular</label>
+    <input readonly id="titular" type="text" class="form-control" name="titular" size="30" value="$proyectos.titular"/>
+</div>
+
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+    </div>
+</form>
+<br>
+<br>
+<br>

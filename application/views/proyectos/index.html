@@ -1,0 +1,21 @@
+$def with(proyectos)
+<h3>
+    <a href="/proyectos">proyectos</a>
+</h3>
+<table id="datos_tabla" class="table table-hover" cellspacing="0" width="100%">
+    <thead>
+        <th>proyectos</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </thead>
+    <tbody>
+        $for item in proyectos:
+        <tr>
+            <td><a href='/proyectos/view/$item.titular'>$item.titular</a></td>
+            <td><a href='/proyectos/edit/$item.id_proyecto'><span class="glyphicon glyphicon-pencil"></span></a></td>
+            <td><a href='/proyectos/delete/$item.id_proyecto'><span class="glyphicon glyphicon-trash"></span></a></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>
